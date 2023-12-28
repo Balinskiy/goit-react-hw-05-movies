@@ -18,7 +18,8 @@ const Home = () => {
   }, []);
   console.log('movies', movies);
   return (
-    <div>
+    <div className="">
+      <h1 className="font-bold text-3xl my-5 ps-5">Trending Today:</h1>
       <MovieList movies={movies} />
     </div>
   );

@@ -30,6 +30,7 @@ const Movies = () => {
   return (
     <div>
       <SearchForm onSubmit={onSubmit} />
+      <div className="mb-5"></div>
       <MovieList movies={movies} />
     </div>
   );

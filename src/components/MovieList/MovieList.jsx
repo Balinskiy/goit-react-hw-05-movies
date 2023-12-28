@@ -6,10 +6,10 @@ const MovieList = ({ movies }) => {
 
   return (
     <div>
-      <ul>
+      <ul className="ps-5">
         {movies.map(movie => {
           return (
-            <li key={movie.id}>
+            <li key={movie.id} className="text-blue-700 hover:text-red-700">
               <Link to={`/movies/${movie.id}`} state={{ from: location }}>
                 <h3>{movie.title || movie.name}</h3>
               </Link>

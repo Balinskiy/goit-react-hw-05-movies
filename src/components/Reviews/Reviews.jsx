@@ -10,7 +10,7 @@ const Reviews = () => {
     const getMovieReviews = async () => {
       try {
         const response = await getReviews(movieId);
-        setReview(response);
+        setReview(response.results);
       } catch (error) {
         console.log(error.message);
       }
@@ -19,15 +19,17 @@ const Reviews = () => {
   }, [movieId]);
   console.log(review);
   return (
-    <div>
+    <div className="mt-5 ps-5">
       {review.length === 0 ? (
-        <p>We don't have ane reviews for this movie</p>
+        <p>We don't have any reviews for this movie</p>
       ) : (
         <ul>
           {review.map(({ id, author, content }) => {
             return (
               <li key={id}>
-                <h3>Author: {author}</h3>
+                <h3 className="font-bold text-1xl mt-5 ps-5">
+                  Author: {author}
+                </h3>
                 <p>{content}</p>
               </li>
             );
