@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = 'fb25b8f9a46bee713b124c118f253c1a';
+const API_KEY = 'a0679b4ab8f61bde963499da4762960e';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 axios.defaults.params = {
   api_key: API_KEY,
@@ -34,8 +34,6 @@ export const getMoviesDetails = async id => {
     throw new Error(error.message);
   }
 };
-
-// https://api.themoviedb.org/3/movie/1254/credits?language=en-US
 
 export const getCast = async id => {
   try {
